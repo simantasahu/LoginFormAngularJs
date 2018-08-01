@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>LoginPage Using AngularJS</h2>
+<div ng-controller="logincontrollernew">
+    <form name="myForm" ng-submit="LoginCheck()">
+        <div style="color:green">{{msg}}</div>
+        <table class="table-horizontal">
+            <tr>
+                <td>
+                    <label>Enter Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Enter EmailID" ng-model="UserModel.Email" required />
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Enter Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Enter Password" ng-model="UserModel.Password" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="Login" value="Login" class="btn btn-success" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+@section scripts{
+    <script src="~/App/controller/logincontrollernew.js"></script>
+}
+
+
+
